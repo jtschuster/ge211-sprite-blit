@@ -13,3 +13,8 @@ $ npm run serve
 ```
 
 and then visiting http://localhost:8080 in a browser should run the example!
+
+
+Running the above command fails.
+If you change ```crate-type = ["staticlib"]``` in cargo.toml, you can compile to wasm32-unknown-emscripten, but that only outputs a c style .a library
+

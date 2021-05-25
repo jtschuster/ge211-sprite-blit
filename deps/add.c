@@ -1,3 +1,3 @@
-int add(int x, int y) {
+extern int add(int x, int y) {
     return x + y;
 }
