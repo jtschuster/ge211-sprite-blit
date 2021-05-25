@@ -25,6 +25,7 @@ pub extern fn addy(x: i32, y:i32) {
 
 #[wasm_bindgen(start)]
 pub fn start() -> Result<(), JsValue> {
+    println!("hello world");
     let document = web_sys::window().unwrap().document().unwrap();
     let canvas = document.get_element_by_id("canvas").unwrap();
     let canvas: web_sys::HtmlCanvasElement = canvas.dyn_into::<web_sys::HtmlCanvasElement>()?;
