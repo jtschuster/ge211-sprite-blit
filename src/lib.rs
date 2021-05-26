@@ -3,7 +3,7 @@ use wasm_bindgen::JsCast;
 use web_sys::{WebGlProgram, WebGlRenderingContext, WebGlShader};
 
 extern "C" {
-    fn add(x: i32, y: i32) -> i32;
+    fn _add(x: i32, y: i32) -> i32;
 }
 
 #[allow(dead_code)]
@@ -19,7 +19,7 @@ extern "C" {
 
 #[no_mangle]
 pub extern fn addy(x: i32, y:i32) {
-    let n = unsafe{ add(x, y) };
+    let n = unsafe{ _add(x, y) };
     println!("x + y = {}", n);
 }
 
@@ -36,7 +36,7 @@ pub fn start() -> Result<(), JsValue> {
         .dyn_into::<WebGlRenderingContext>()?;
     
     unsafe {
-        let tmp: i32 = add(3, 3);
+        let tmp: i32 = _add(3, 3);
         alert(&format!("the number is {}", tmp));
         println!("3 + 3 = {}", tmp);
     }

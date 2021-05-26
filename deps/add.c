@@ -1,3 +1,3 @@
-extern int add(int x, int y) {
+int _add(int x, int y) {
     return x + y;
 }
